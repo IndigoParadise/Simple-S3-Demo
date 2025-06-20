@@ -20,7 +20,7 @@ public class SimpleS3Demo {
             PutObjectRequest putRequest = PutObjectRequest
                     .builder()
                     .bucket(BUCKET) // provide bucket to connect
-                    .key("s3://course-bucket-demo-1/public/testingFile.txt") // The (future) name of the object in the bucket
+                    .key("public/testingFile.txt") // The (future) name of the object in the bucket allocated at "s3://course-bucket-demo-1/public/testingFile.txt"
                     .build();
 
             s3Client.putObject(putRequest, Path.of("testingFile.txt"));// write to the s3 bucket
